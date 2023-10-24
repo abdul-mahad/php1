@@ -1,0 +1,13 @@
+Create table Roles (
+Role_id int PRIMARY key AUTO_INCREMENT,
+    Role_Name varchar(40)
+);
+
+create table Users(
+User_id int PRIMARY key AUTO_INCREMENT,
+    User_name varchar(40),
+    User_Emial varchar(50),
+    User_Password varchar(50),
+    role_id int,
+    FOREIGN KEY(Role_id)  REFERENCES roles(Role_id)
+);
